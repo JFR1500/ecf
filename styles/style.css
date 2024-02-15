@@ -1,0 +1,676 @@
+
+/* ____________________________________________________________________________*/
+/*                                  SOMMAIRE                                   */
+/* ____________________________________________________________________________*/
+/*
+    - REHINITIALISATION DU NAVIGATEUR
+
+    - STRUCTURE DE LA PAGE WEB
+
+    - HEADER
+
+    - FOOTER
+
+    - BODY
+
+    - RESPONSIVE
+ 
+*/
+
+/* ____________________________________________________________________________*/
+ /*                      REHINITIALISATION DU NAVIGATEUR                       */
+/* ____________________________________________________________________________*/
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+
+/* ____________________________________________________________________________*/
+/*                          STRUCTURE DE LA PAGE WEB                           */
+/* ____________________________________________________________________________*/
+
+html{
+    font-size: 62.5%;       /* caractères en pourcentage, suffit d'utilise l'unité rem pour la suite */                 
+}
+
+body{
+    background-image: url("../images/background-blue.jpg");
+}
+
+header, main, footer, body {
+    margin: 0.2rem;
+    padding: 0.2rem;
+}
+
+
+/*DEBUT RESPONSIVE AU-DESSUS DE 768px*/
+@media (min-width:768px){
+
+/* ____________________________________________________________________________*/
+/*                                   HEADER                                    */
+/* ____________________________________________________________________________*/
+/* --------------------------------------------------------------------------- */
+/* LOGO + MENU */ 
+/* --------------------------------------------------------------------------- */
+
+/* ASSEMBLAGE EN LIGNE DES 3 BLOCS QUI COMPREND : LOGO + ONGLETS PRINCIPAUX */
+.header {
+    display: flex;          
+    flex-direction: row; 
+
+}
+
+
+.logo{
+    border: solid black;
+    margin: 0.2rem;
+    width: 10rem;
+    height: 10rem
+
+}
+
+
+/* ALIGNEMENT SUR LA LARGEUR DES ONGLETS 1 ET 2 */
+.menu-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;    /* Pour centrer les div  */
+
+}
+
+/* FORMATAGE DES BLOCS ET DU CONTENU DES ONGLETS PRINCIPAUX */
+.hb1{
+    border: solid black;
+    display: flex;
+    flex-direction: row;
+    min-width: 23rem;           /* min est important pour autoriser les div a bouger */
+    height: 3rem;
+    justify-content: center;    /* Centre le texte G-D dans la div */  
+    margin: 0.2rem;             /* Espace entre les onglets */
+    background: rgb(72, 127, 237);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+/* Cadre connexion */
+.connexion{
+    display: flex;              /* Permet d'activer le centrage du texte dans la div */
+    min-width: 21rem;           /* min pour que le cadre ne se réduise pas */
+    height: 3rem;
+    border: solid black;
+    margin: 0.2rem;             /* Espace entre les onglets */
+    background: rgb(72, 127, 237);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    justify-content: center;    /* Centre le texte G-D dans la div */  
+
+}
+
+
+/* ____________________________________________________________________________*/
+/*                                   FOOTER                                    */
+/* ____________________________________________________________________________*/
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-menu-lien {
+    border: solid black;
+    background: rgb(72, 127, 237);
+    padding: 0.2rem;
+    margin: 0.2rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+
+
+
+/* ____________________________________________________________________________*/
+/*                                    BODY                                     */
+/* ____________________________________________________________________________*/
+
+/* --------------------------------------------------------------------------- */
+/* MAIN COMPLET */
+/* --------------------------------------------------------------------------- */
+.main-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ecarte les blocs entre eux */
+}
+
+/* --------------------------------------------------------------------------- */
+/* MAIN PAGE JEU PRODUCTION */
+/* --------------------------------------------------------------------------- */
+.main-jeux {            /* Pour centrer l'ensemble des blocs de jeux */
+    display: flex;
+    flex-direction: column;
+}
+
+.jeu-prod{              /* Pour écarter chaque blocs de jeu */
+    display: flex;
+    margin: 0.2rem;
+    padding: 0.2rem;
+}
+
+.jeu-prod-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+
+/* --------------------------------------------------------------------------- */
+/* MAIN PAGE ACTUALITES */
+/* --------------------------------------------------------------------------- */
+.main-actu {            /* Pour centrer l'ensemble des blocs de jeux */
+    display: flex;
+    flex-direction: column;
+}
+
+.actu-blocs{              /* Pour écarter chaque blocs de jeu */
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    min-height: 20rem;
+    border: solid black;
+}
+
+.actu-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: medium;
+}
+    
+/* --------------------------------------------------------------------------- */
+/* MAIN PAGE FORUM */
+/* --------------------------------------------------------------------------- */
+.main-forum {            /* Pour centrer l'ensemble des blocs de jeux */
+    display: flex;
+    flex-direction: column;
+}
+
+.forum-blocs{              /* Pour écarter chaque blocs de jeu */
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    min-height: 20rem;
+    border: solid black;
+}
+
+.forum-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: medium;
+}
+
+/* --------------------------------------------------------------------------- */
+/* MAIN PAGE FAVORIS */
+/* --------------------------------------------------------------------------- */
+.main-favoris {            /* Pour centrer l'ensemble des blocs de jeux */
+    display: flex;
+    flex-direction: column;
+}
+
+.favoris-blocs{              /* Pour écarter chaque blocs de jeu */
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    min-height: 20rem;
+    border: solid black;
+}
+
+.favoris-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: medium;
+}
+
+    
+/* --------------------------------------------------------------------------- */
+/* MAIN PAGE CONNEXION */
+/* --------------------------------------------------------------------------- */
+.main-connexion {            /* Pour centrer l'ensemble des blocs de jeux */
+    display: flex;
+    flex-direction: column;
+}
+
+.connexion-blocs{              /* Pour écarter chaque blocs de jeu */
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    min-height: 20rem;
+    border: solid black;
+}
+
+.connexion-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: medium;
+}
+
+
+/* --------------------------------------------------------------------------- */
+/* MENU LATERAL */
+/* --------------------------------------------------------------------------- */
+
+.actu-dev{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  /* Permet d'équilibrer les cadres de chaque côté */
+}
+
+
+.main-lateral-droite, .main-lateral-gauche {     
+    display: flex;
+    flex-direction: column;
+    min-width: 30rem;           /* min permet que la div ne se rtracte pas si je rempli le main */
+}
+
+
+.actu, .blog {
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    background: rgb(72, 127, 237);
+    padding: 0.2rem;
+    margin: 0.2rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    min-height: 30rem; /* Hauteur minimal */
+    
+}
+
+
+.main-descriptif {
+    display: flex;
+    flex-direction: column;
+}
+
+.descriptif-ets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.descriptif-ets-paragraphe{
+    padding: 0.2rem;
+    margin: auto;
+    font-size: large;
+}
+
+
+/* _______________________________________________________________________________ */
+/* FORMATAGE DES BALISES PRINCIPALES */
+/* _______________________________________________________________________________ */
+
+/* TYPOGRAPHIE */
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+} 
+
+a{
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+
+/* ____________________________________________________________________________*/
+/*       EFFET AVEC LA SOURIS ET LES CLICS       */
+/* ____________________________________________________________________________*/
+
+/* CHANGEMENT DE COULEUR AU SURVOL */
+a:hover {
+    background-color: rgb(181, 177, 230);
+
+}
+
+
+
+/* ____________________________________________________________________________*/
+/*       CLASSES BALISES TABLEAUX     */
+/* ____________________________________________________________________________*/
+.vert {
+    background-color: rgb(100, 197, 100);
+}
+
+.bleue {
+    background-color: rgb(86, 86, 245);
+}
+
+} /*FIN RESPONSIVE AU-DESSUS DE 768px*/
+
+
+
+
+/* DEBUT RESPONSIVE EN-DESSOUS DE 768px*/
+@media (max-width:768px) {    /* En-dessous de 768px le code s'exécutera */
+   /* ____________________________________________________________________________*/
+/*                                   HEADER                                    */
+/* ____________________________________________________________________________*/
+/* --------------------------------------------------------------------------- */
+/* LOGO + MENU */ 
+/* --------------------------------------------------------------------------- */
+
+/* ASSEMBLAGE EN LIGNE DES 3 BLOCS QUI COMPREND : LOGO + ONGLETS PRINCIPAUX */
+.header {
+    display: flex;          
+    flex-direction: column; 
+}
+
+
+.logo{
+    border: solid black;
+    margin: 0.2rem;
+    width: 15rem;
+    height: 15rem
+    
+}
+
+
+/* ALIGNEMENT SUR LA LARGEUR DES ONGLETS 1 ET 2 */
+.menu-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;    /* Pour centrer les div  */
+
+}
+
+/* FORMATAGE DES BLOCS ET DU CONTENU DES ONGLETS PRINCIPAUX */
+.hb1{
+    border: solid black;
+    display: flex;
+    flex-direction: row;
+    min-width: 23rem;           /* min est important pour autoriser les div a bouger */
+    height: 3rem;
+    justify-content: center;    /* Centre le texte G-D dans la div */  
+    margin: 0.2rem;             /* Espace entre les onglets */
+    background: rgb(72, 127, 237);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+/* Cadre connexion */
+.connexion{
+    display: flex;              /* Permet d'activer le centrage du texte dans la div */
+    min-width: 23rem;           /* min pour que le cadre ne se réduise pas */
+    height: 3rem;
+    border: solid black;
+    margin: 0.2rem;             /* Espace entre les onglets */
+    background: rgb(72, 127, 237);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    justify-content: center;    /* Centre le texte G-D dans la div */  
+
+}
+
+
+/* ____________________________________________________________________________*/
+/*                                   FOOTER                                    */
+/* ____________________________________________________________________________*/
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-menu-lien {
+    border: solid black;
+    background: rgb(72, 127, 237);
+    padding: 0.2rem;
+    margin: 0.2rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+
+
+
+/* ____________________________________________________________________________*/
+/*                                    BODY                                     */
+/* ____________________________________________________________________________*/
+
+/* --------------------------------------------------------------------------- */
+/* MAIN INDEX */
+/* --------------------------------------------------------------------------- */
+.main-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ecart entre les blocs */
+}
+
+
+/* --------------------------------------------------------------------------- */
+/* MAIN PAGE JEU PRODUCTION */
+/* --------------------------------------------------------------------------- */
+.main-jeux {            /* Pour centrer l'ensemble des blocs de jeux */
+    display: flex;
+    flex-direction: column;
+}
+
+.jeu-prod{              /* Pour écarter chaque blocs de jeu */
+    display: flex;
+    margin: 0.2rem;
+    padding: 0.2rem;
+}
+
+.jeu-prod-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+/* --------------------------------------------------------------------------- */
+/* MAIN PAGE ACTUALITES */
+/* --------------------------------------------------------------------------- */
+.main-actu {            /* Pour centrer l'ensemble des blocs de jeux */
+    display: flex;
+    flex-direction: column;
+}
+
+.actu-blocs{              /* Pour écarter chaque blocs de jeu */
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    min-height: 20rem;
+    border: solid black;
+}
+
+.actu-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: medium;
+}
+    
+/* --------------------------------------------------------------------------- */
+/* MAIN PAGE CONNEXION */
+/* --------------------------------------------------------------------------- */
+.main-connexion {            /* Pour centrer l'ensemble des blocs de jeux */
+    display: flex;
+    flex-direction: column;
+}
+
+.connexion-blocs{              /* Pour écarter chaque blocs de jeu */
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    min-height: 20rem;
+    border: solid black;
+}
+
+.connexion-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: medium;
+}
+
+/* --------------------------------------------------------------------------- */
+/* MAIN PAGE FORUM */
+/* --------------------------------------------------------------------------- */
+.main-forum {            /* Pour centrer l'ensemble des blocs de jeux */
+    display: flex;
+    flex-direction: column;
+}
+
+.forum-blocs{              /* Pour écarter chaque blocs de jeu */
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    min-height: 20rem;
+    border: solid black;
+}
+
+.forum-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: medium;
+}
+
+/* --------------------------------------------------------------------------- */
+/* MAIN PAGE FAVORIS */
+/* --------------------------------------------------------------------------- */
+.main-favoris {            /* Pour centrer l'ensemble des blocs de jeux */
+    display: flex;
+    flex-direction: column;
+}
+
+.favoris-blocs{              /* Pour écarter chaque blocs de jeu */
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    min-height: 20rem;
+    border: solid black;
+}
+
+.favoris-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: medium;
+}
+
+
+/* --------------------------------------------------------------------------- */
+/* MENU LATERAL */
+/* --------------------------------------------------------------------------- */
+
+
+.main-lateral-droite, .main-lateral-gauche {     
+    display: flex;
+    flex-direction: column;     /* Met actu et forum cote a cote */
+    min-width: 18rem;           /* min permet que la div ne se rtracte pas si je rempli le main */
+}
+
+.actu-dev{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* Permet d'équilibrer les cadres de chaque côté */
+}
+
+
+.actu, .blog {
+    display: flex;
+    flex-direction: column;     
+    border: solid black;
+    background: rgb(72, 127, 237);
+    padding: 0.2rem;
+    margin: 0.2rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    min-height: 20rem; /* Hauteur minimal */
+
+}
+
+
+.main-descriptif {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.descriptif-ets-paragraphe{
+    padding: 0.2rem;
+    margin: auto;
+
+}
+
+
+/* _______________________________________________________________________________ */
+/* FORMATAGE DES BALISES PRINCIPALES */
+/* _______________________________________________________________________________ */
+
+/* TYPOGRAPHIE */
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+} 
+
+a{
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+/* ____________________________________________________________________________*/
+/*       EFFET AVEC LA SOURIS ET LES CLICS       */
+/* ____________________________________________________________________________*/
+
+/* CHANGEMENT DE COULEUR AU SURVOL */
+a:hover {
+    background-color: rgb(181, 177, 230);
+
+}
+
+
+/* ____________________________________________________________________________*/
+/*       CLASSES BALISES TABLEAUX     */
+/* ____________________________________________________________________________*/
+.vert {
+    background-color: rgb(100, 197, 100);
+}
+
+.bleue {
+    background-color: rgb(86, 86, 245);
+}
+
+
+
+}/* FIN RESPONSIVE EN-DESSOUS DE 768px*/
+
+
+/*___________________________________________*/
+/* PAGE JEU EN PRODUCTION */
+/*___________________________________________*/
+.jeu-prod{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 0.2;
+    padding: 0.5rem;
+    min-width: 17rem;
+    min-height: 17rem;
+    border: solid black;
+}
+
+.jeu-prod-text-img{
+    display: flex;
+    flex-direction: column;
+}
+
+.jeu-prod-img{
+    display: flex;
+    border: solid black;
+    width: 10rem;
+    height: 10rem;
+}
+
+
+
+
+
